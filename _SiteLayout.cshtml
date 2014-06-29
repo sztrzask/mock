@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@Page.Title - My ASP.NET Web Page</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="http://fonts.googleapis.com/css?family=Raleway:400,800,300" rel="stylesheet" type="text/css">
+    <link href="~/Content/styles.css" rel="stylesheet" />
+</head>
+<body>
+    <header></header>
+    <div id="loader" class="pageload-overlay show" style="z-index:2" data-opening="m -5,-5 0,70 90,0 0,-70 z m 5,5 c 0,0 7.9843788,0 40,0 35,0 40,0 40,0 l 0,60 c 0,0 -3.944487,0 -40,0 -30,0 -40,0 -40,0 z">
+        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 80 60" preserveAspectRatio="none">
+            <path d="M-5,-5C-5,-5,-5,65,-5,65C-5,65,85,65,85,65C85,65,85,-5,85,-5C85,-5,-5,-5,-5,-5M0,30C0,30,15,50,40,30C65,10,80,30,80,30C80,30,80,30,80,30C80,30,65,10,40,30C15,50,0,30,0,30C0,30,0,30,0,30" />
+        </svg>
+    </div>
+    <div id="loader2" class="pageload-overlay" data-opening="m -5,-5 0,70 90,0 0,-70 z m 5,35 c 0,0 15,20 40,0 25,-20 40,0 40,0 l 0,0 C 80,30 65,10 40,30 15,50 0,30 0,30 z">
+				<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 80 60" preserveAspectRatio="none" >
+					<path d="m -5,-5 0,70 90,0 0,-70 z m 5,5 c 0,0 7.9843788,0 40,0 35,0 40,0 40,0 l 0,60 c 0,0 -3.944487,0 -40,0 -30,0 -40,0 -40,0 z"/>
+				</svg>
+			</div>
+    <nav id="menu">
+        <div>
+            <ul class="navigation" id="navigation">
+                <li><a href="#video" class="title">The <span>company</span></a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#about">About us</a></li>
+                <li><a href="#contact">Contact us</a></li>
+            </ul>
+           
+        </div>
+         <ul class="social">
+                <li><a class="facebook icon-facebook"></a></li>
+                <li><a class="twitter icon-twitter"></a></li>
+            </ul>
+    </nav>
+
+    <section id="wrapper">
+        <div id="video">
+            <div id="video-caption"><h1>ITM4Mobile</h1><span>reach for the limits</span></div>
+            <button></button>
+            <div class="player" style="display:block; margin: auto; background: rgba(0,0,0,0.5)" data-property="{videoURL:'http://youtu.be/OuqjeMcDqhA',containment:'#video',showControls:false, gaTrack:false, mute:true, opacity:1, startAt:18}"></div>
+        </div>
+        <div id="work" >
+            <section class="grid-wrap">
+                <ul class="grid swipe-right" id="grid">
+                    <li class="title-box">
+                        <h2>Our work</h2>
+                    </li>
+                    <li><a href="#"><img src="Content/images/1.png" alt="img01"><h3>Project 1</h3></a></li>
+                    <li><a href="#"><img src="Content/images/2.png" alt="img02"><h3>Project 2</h3></a></li>
+                    <li><a href="#"><img src="Content/images/3.png" alt="img02"><h3>Project 3</h3></a></li>
+                    <li><a href="#"><img src="Content/images/4.png" alt="img02"><h3>Project 4</h3></a></li>
+                    <li><a href="#"><img src="Content/images/5.png" alt="img02"><h3>Project 5</h3></a></li>
+                    <li><a href="#"><img src="Content/images/6.png" alt="img02"><h3>Project 6</h3></a></li>
+                    <li><a href="#"><img src="Content/images/7.png" alt="img02"><h3>Project 7</h3></a></li>
+                    <li><a href="#"><img src="Content/images/8.png" alt="img02"><h3>Project 8</h3></a></li>
+                    <li><a href="#"><img src="Content/images/9.png" alt="img02"><h3>Project 9</h3></a></li>
+                    <li><a href="#"><img src="Content/images/10.png" alt="img02"><h3>Project 10</h3></a></li>
+                    <li><a href="#"><img src="Content/images/11.png" alt="img02"><h3>Project 11</h3></a></li>
+                  
+                </ul>
+            </section>
+        </div>
+        <div id="about"  style="background-color:green; height:800px"></div>
+        <div id="contact"  style="background-color:blue; height:800px"></div>
+    </section>
+
+    <footer></footer>
+    <script src="~/Scripts/snap.svg-min.js"></script>
+    <script src="~/Scripts/svgLoader.js"></script>
+    <script>
+        var aloader = new SVGLoader(document.getElementById('loader'), { speedIn: 400, easingIn: mina.easeinout });
+        var triggered = false;
+        var loader = {
+            show: function () { }, hide: function ()
+            {
+            }
+        };
+    </script>
+    <script src="~/Scripts/pace.min.js"></script>
+    <script src="~/Scripts/jquery-2.1.1.min.js"></script>
+    <script src="~/Scripts/jquery.mb.YTPlayer.js"></script>
+    <script src="~/Scripts/jquery.nav.js"></script>
+  
+
+    <script src="~/Scripts/modernizr.custom.js"></script>
+    <script src="~/Scripts/masonry.pkgd.min.js"></script>
+    <script src="~/Scripts/imagesloaded.pkgd.min.js"></script>
+    <script src="~/Scripts/colorfinder-1.1.js"></script>
+    <script src="~/Scripts/gridScrollFx.js"></script>
+    <script>
+  
+        $(".player").mb_YTPlayer();
+        $(".player").on("YTPStart", function ()
+        {
+            if (!triggered)
+            {
+                aloader.show();
+                setTimeout(function ()
+                {
+                    loader = new SVGLoader(document.getElementById('loader2'), { speedIn: 400, easingIn: mina.easeinout });
+                    document.getElementById('loader').remove();
+
+                }, 400);
+                triggered = true;
+                $(document).ready(function ()
+                {
+                    $('#navigation').onePageNav({
+                        scrollChange: function(elem)
+                        {
+                            
+                        }
+                    });
+                });
+            }
+        });
+        new GridScrollFx(document.getElementById('grid'), {
+            viewportFactor: 0.4
+        });
+
+    </script>
+
+ 
+    @RenderSection("Scripts", required: false)
+
+</body>
+</html>

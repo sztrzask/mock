@@ -1,0 +1,231 @@
+﻿@import 'colors.less';
+@import 'mixins.less';
+@nav-width: 245px;
+
+*,
+*:after,
+*:before
+{
+    outline: none;
+    border: none;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*
+{
+    .font-raleway();
+    color: #111111;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+body
+{
+    background: @color-complement-1;
+}
+
+html, body
+{
+    height: 100%;
+}
+
+section
+{
+    background: @color-complement-1;
+}
+
+#menu,
+#wrapper
+{
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+#video
+{
+    width:100%;
+    height:100%;
+}
+#work
+{
+    min-height:200px;
+}
+@wrapper-margin: 3px;
+#wrapper
+{
+    position: absolute;
+    left: @nav-width;
+    right: 0;
+    margin:@wrapper-margin @wrapper-margin 0 0;
+}
+
+#menu
+{
+    width: @nav-width;
+    height: 100%;
+    overflow: hidden;
+    position:fixed;
+
+    div
+    {
+        top: 50%;
+        -moz-transform: translateY(-110%);
+        -ms-transform: translateY(-110%);
+        -o-transform: translateY(-110%);
+        -webkit-transform: translateY(-110%);
+        transform: translateY(-110%);
+        position: relative;
+    }
+
+    ul
+    {
+        list-style: none;
+    }
+
+  
+}
+
+.title
+{
+    display:block;
+    span
+    {
+        font-weight: 800;
+    }
+
+    font-size: 1.7rem !important;
+    line-height: 4rem;
+    text-align:center;
+}
+
+.navigation
+{
+    a
+    {
+        text-decoration: none;
+        font-size: 1.2rem;
+    }
+
+    li
+    {
+        left: 2rem;
+        position: relative;
+        width: 150px;
+
+        &:before
+        {
+            -webkit-transition: -webkit-transform 0.2s;
+            pointer-events: none;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            -webkit-font-smoothing: antialiased;
+            font-smoothing: antialiased;
+            position: absolute;
+            top: -2px;
+            left: -7px;
+            box-sizing: content-box;
+            padding: 0 5px;
+            width: 100%;
+            height: 100%;
+            border: 2px solid @color-accent;
+            content: '';
+            opacity: 0;
+            -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
+            transition: opacity 0.2s, transform 0.2s;
+            -webkit-transform: scale(0.8333);
+            transform: scale(0.8333);
+        }
+    }
+
+    .current:not(:first-child)
+    {
+        -webkit-transform: scale(0.8333);
+        transform: scale(0.8333);
+
+        &:before
+        {
+            opacity: 1;
+            -webkit-transform: scale(1.2);
+        }
+
+        a
+        {
+            color:@color-accent;
+        }
+    }
+
+    li:first-child
+    {
+        text-align: center;
+        padding-left: 0;
+        background: none;
+        width: auto;
+        left: 0;
+
+        &:before
+        {
+            content: none;
+        }
+
+        text-align: center;
+        padding-left: 0;
+        background: none;
+        width: auto;
+        left: 0;
+        background-image: url('logo.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 70px;
+        text-indent:-1000px;
+    }
+}
+
+.social
+{
+    position: absolute;
+    bottom: 3rem;
+    left: 3rem;
+
+    li
+    {
+        float: left;
+
+        a
+        {
+            font-size: 1.6rem !important;
+            padding: 0 .7rem;
+            color: @color-accent;
+            opacity: 0.8;
+            -moz-transition: all ease-in .3s;
+            -o-transition: all ease-in .3s;
+            -webkit-transition: all ease-in .3s;
+            transition: all ease-in .3s;
+
+            &:before
+            {
+                color: @color-accent;
+            }
+
+            &:hover
+            {
+                opacity: 1;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.twitter
+{
+} 
+
+.facebook
+{
+}
+@import 'grid.less';
+@import 'loaders.less';
+@import 'fonts.less';
