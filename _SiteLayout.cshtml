@@ -25,8 +25,8 @@
             <ul class="navigation" id="navigation">
                 <li><a href="#video" class="title">The <span>company</span></a></li>
                 <li><a href="#work">Work</a></li>
-                <li><a href="#about">About us</a></li>
-                <li><a href="#contact">Contact us</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact us</a></li>
             </ul>
            
         </div>
@@ -38,11 +38,14 @@
 
     <section id="wrapper">
         <div id="video">
-            <div id="video-caption"><h1>ITM4Mobile</h1><span>reach for the limits</span></div>
-            <button></button>
-            <div class="player" style="display:block; margin: auto; background: rgba(0,0,0,0.5)" data-property="{videoURL:'http://youtu.be/OuqjeMcDqhA',containment:'#video',showControls:false, gaTrack:false, mute:true, opacity:1, startAt:18}"></div>
+            <div id="video-caption">
+                <h1>Motto</h1>
+                <span>Carrot.</span><span>Orange.</span><span>Obergine.</span>
+                <button id="video-play-button" class="icon-play"></button>
+            </div>
+            <div class="player" style="display:block; margin: auto; background: rgba(0,0,0,0.5)" data-property="{videoURL:'http://youtu.be/OuqjeMcDqhA',containment:'#video',showControls:false, gaTrack:false, mute:true, opacity:0.9, startAt:18}"></div>
         </div>
-        <div id="work" >
+        <div id="work">
             <section class="grid-wrap">
                 <ul class="grid swipe-right" id="grid">
                     <li class="title-box">
@@ -50,7 +53,7 @@
                     </li>
                     <li><a href="#"><img src="Content/images/1.png" alt="img01"><h3>Project 1</h3></a></li>
                     <li><a href="#"><img src="Content/images/2.png" alt="img02"><h3>Project 2</h3></a></li>
-                    <li><a href="#"><img src="Content/images/3.png" alt="img02"><h3>Project 3</h3></a></li>
+                    <li><a href="#"><img src="Content/images/3.png" alt="img02"  style="width:350px;"><h3>Project 3</h3></a></li>
                     <li><a href="#"><img src="Content/images/4.png" alt="img02"><h3>Project 4</h3></a></li>
                     <li><a href="#"><img src="Content/images/5.png" alt="img02"><h3>Project 5</h3></a></li>
                     <li><a href="#"><img src="Content/images/6.png" alt="img02"><h3>Project 6</h3></a></li>
@@ -59,12 +62,18 @@
                     <li><a href="#"><img src="Content/images/9.png" alt="img02"><h3>Project 9</h3></a></li>
                     <li><a href="#"><img src="Content/images/10.png" alt="img02"><h3>Project 10</h3></a></li>
                     <li><a href="#"><img src="Content/images/11.png" alt="img02"><h3>Project 11</h3></a></li>
-                  
+                    <li><a href="#"><img src="Content/images/12.jpg" alt="img02"  style="width:400px;"><h3>Project 12</h3></a></li>
+                    <li><a href="#"><img src="Content/images/13.jpg" alt="img02"><h3>Project 13</h3></a></li>
+                    <li><a href="#"><img src="Content/images/14.jpg" alt="img02" style="width:300px;"><h3>Project 14</h3></a></li>
+                    <li><a href="#"><img src="Content/images/15.jpg" alt="img02"><h3>Project 15</h3></a></li>
+                    <li><a href="#"><img src="Content/images/16.jpg" alt="img02" style="width:300px;"><h3>Project 16</h3></a></li>
+                    <li><a href="#"><img src="Content/images/17.jpg" alt="img02"><h3>Project 17</h3></a></li>
+                    <li><a href="#"><img src="Content/images/18.jpg" alt="img02"><h3>Project 18</h3></a></li>
                 </ul>
             </section>
         </div>
-        <div id="about"  style="background-color:green; height:800px"></div>
-        <div id="contact"  style="background-color:blue; height:800px"></div>
+        @*<div id="about" style="background-color:green; height:800px"></div>
+        <div id="contact" style="background-color:blue; height:800px"></div>*@
     </section>
 
     <footer></footer>
@@ -108,18 +117,42 @@
                 $(document).ready(function ()
                 {
                     $('#navigation').onePageNav({
-                        scrollChange: function(elem)
+                        scrollChange: function()
                         {
-                            
+                            playPause();
+                        },
+                        end: function()
+                        {
+                            playPause();
                         }
                     });
                 });
+                function playPause()
+                {
+                    var li =
+                        $('li.current');
+                    if (li.is(':first-child'))
+                    {
+                        $('.player').playYTP();
+                    }
+                    else
+                    {
+                        $('.player').pauseYTP();
+                    }
+                }
             }
         });
         new GridScrollFx(document.getElementById('grid'), {
             viewportFactor: 0.4
         });
 
+        $('#video-play-button').click(function()
+        {
+            $('.mbYTP_wrapper').css({ opacity: 1 });
+            $(".player").unmuteYTPVolume();
+            $('#video-caption').addClass('hide');
+        });
+      
     </script>
 
  
